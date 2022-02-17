@@ -28,16 +28,19 @@ document.getElementById("calculate-btn").addEventListener("click", function(){
     const expense = document.getElementById("total-expense");
     let totalExpense = Number(expense.innerText);
 
+
     // error handling 01::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     if (incomeMoney < 0 || foodCost < 0 || rentCost < 0 || clothCost < 0) {
         document.getElementById("error-msg").style.display = "block";
         document.getElementById("error-msg1").style.display = "none";
+        document.getElementById("error-msg4").style.display = "none";
         expense.innerText = "";
         balance.innerText = "";
         return;
     }
     // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
     
     totalExpense = foodCost + rentCost + clothCost;
@@ -47,6 +50,7 @@ document.getElementById("calculate-btn").addEventListener("click", function(){
     if(totalExpense > incomeMoney){
         document.getElementById("error-msg1").style.display = "block";
         document.getElementById("error-msg").style.display = "none";
+        document.getElementById("error-msg4").style.display = "none";
         expense.innerText = "";
         balance.innerText = "";
         return;
@@ -55,6 +59,7 @@ document.getElementById("calculate-btn").addEventListener("click", function(){
 
     document.getElementById("error-msg1").style.display = "none";
     document.getElementById("error-msg").style.display = "none";
+    document.getElementById("error-msg4").style.display = "none";
 
     // function call 
     let totalBalance = getInput2("balance"); 

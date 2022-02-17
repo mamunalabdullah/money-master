@@ -28,3 +28,14 @@ label{
 #error-msg, #error-msg1, #error-msg2, #error-msg3, #error-msg4{
     display: none;
 }
+
+
+/* responsive  */
+@media (max-width: 767px) {
+    .wallet-field{
+        margin-top: 10px;
+    }
+    #calculate-btn{
+        width: 25%;
+    }
+}
