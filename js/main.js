@@ -84,9 +84,22 @@ document.getElementById("save-btn").addEventListener("click", function(){
     if(savingMoney >= totalBalance){
         document.getElementById("error-msg2").style.display = "block";
         document.getElementById("error-msg3").style.display = "none";
+        document.getElementById("saving-amount").innerText = "";
+        document.getElementById("remaining-balance").innerText = "";
         return;
     }
-    
+
+    //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    //error handling 04::::::::::::::::::::::::::::::::::::::::::::::::::
+    if(savingTotal < 0){
+        document.getElementById("error-msg2").style.display = "none";
+        document.getElementById("error-msg3").style.display = "block";
+        document.getElementById("saving-amount").innerText = "";
+        document.getElementById("remaining-balance").innerText = "";
+        return;
+    }
+
     //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     document.getElementById("error-msg3").style.display = "none";
     document.getElementById("error-msg2").style.display = "none";
