@@ -1,7 +1,11 @@
-
-document.getElementById("calculate-btn").addEventListener("click", function(){
+function getInput(){
     const income = document.getElementById("income-input");
     const incomeMoney = Number(income.value);
+    return incomeMoney;
+}
+
+document.getElementById("calculate-btn").addEventListener("click", function(){
+    const incomeMoney = getInput();
 
     const food = document.getElementById("food-input");
     const foodCost = Number(food.value);
@@ -23,8 +27,7 @@ document.getElementById("calculate-btn").addEventListener("click", function(){
 })
 
 document.getElementById("save-btn").addEventListener("click", function(){
-    const income = document.getElementById("income-input");
-    const incomeMoney = Number(income.value);
+    const incomeMoney = getInput();
 
     const saving = document.getElementById("save-input");
     const savingTotal = Number(saving.value);

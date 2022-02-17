@@ -20,5 +20,8 @@ i{
     color: #f1c40f;
 }
 .wallet-field{
-    background-color: #F8F8F8;
+    background-color: #70a1ff;
+}
+label{
+    font-weight: bold;
 }
