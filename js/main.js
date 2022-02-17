@@ -21,3 +21,21 @@ document.getElementById("calculate-btn").addEventListener("click", function(){
     balance.innerText = totalBalance;
 
 })
+
+document.getElementById("save-btn").addEventListener("click", function(){
+    const income = document.getElementById("income-input");
+    const incomeMoney = Number(income.value);
+
+    const saving = document.getElementById("save-input");
+    const savingTotal = Number(saving.value);
+    const balance = document.getElementById("balance");
+    const totalBalance = Number(balance.innerText);
+    
+
+    const savingMoney = (incomeMoney * savingTotal) / 100;
+    const remainingBalance = totalBalance - savingMoney; 
+    
+    document.getElementById("saving-amount").innerText = savingMoney;
+    document.getElementById("remaining-balance").innerText = remainingBalance;
+    
+})
