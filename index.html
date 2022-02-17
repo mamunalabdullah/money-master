@@ -26,6 +26,8 @@
     <!-- wallet area start  -->
     <div class="container">
         <div class="row">
+
+            <!-- image area  -->
             <div class="col-md-6">
                 <img src="./img/money.jpg" alt="image with money">
             </div>
@@ -64,26 +66,29 @@
                               <input type="text" class="form-control" id="cloth-input">
                             </div>
                         </div>
-                        <input type="button" value="Calculate" class="bg-success form-control w-50 m-auto text-white display-3 border-0 my-4">
+                        <input type="button" value="Calculate" class="bg-success form-control w-50 m-auto text-white display-3 border-0 my-4" id="calculate-btn">
                         <p></p>
-                        <h5 class="fw-bold text-capitalize">total expenses: <span id="total-expense"></span></h5>
-                        <h5 class="fw-bold text-capitalize">balance: <span id="balance"></span></h5>
+                        <div class="balance text-capitalize">
+                            <h5 class="fw-bold">total expenses: <span id="total-expense"></span></h5>
+                            <h5 class="fw-bold">balance: <span id="balance"></span></h5>
+                        </div>
                     </div>
 
                     <!-- savings area  -->
-                    <div class="mb-3 row">
+                    <div class="my-5 row">
                         <div class="d-flex align-items-end">
                             <label for="save-input" class="col-sm-2 col-form-label">Save: </label>
                             <input type="text" class="form-control w-25" id="save-input">
                             <h5 class="mx-auto">%</h5>
-                            <input type="button" value="Save" class="bg-success form-control w-25 m-auto text-white display-3 border-0">
+                            <input type="button" value="Save" class="bg-success form-control w-25 m-auto text-white display-3 border-0" id="save-btn">
                         </div>
-                        <div class="savings text-center py-3">
-                            <h5 class="fw-bold text-capitalize my-3">saving amount: <span id="saving-amount"></span></h5>
-                            <h5 class="fw-bold text-capitalize my-3">remaining balance: <span id="remaining-balance"></span></h5>
+                        <div class="savings text-center my-3">
+                            <h5 class="fw-bold text-capitalize">saving amount: <span id="saving-amount"></span></h5>
+                            <h5 class="fw-bold text-capitalize">remaining balance: <span id="remaining-balance"></span></h5>
                             <p></p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -93,5 +98,7 @@
     <!--  Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <!-- javascript file  -->
+    <script src="./js/main.js"></script>
   </body>
 </html>
