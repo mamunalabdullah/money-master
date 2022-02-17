@@ -28,18 +28,33 @@ document.getElementById("calculate-btn").addEventListener("click", function(){
     const expense = document.getElementById("total-expense");
     let totalExpense = Number(expense.innerText);
 
-    // error handling ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    // error handling 01::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     if (incomeMoney < 0 || foodCost < 0 || rentCost < 0 || clothCost < 0) {
         document.getElementById("error-msg").style.display = "block";
+        document.getElementById("error-msg1").style.display = "none";
         expense.innerText = "";
         balance.innerText = "";
         return;
     }
     // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-    document.getElementById("error-msg").style.display = "none";
+
+    
     totalExpense = foodCost + rentCost + clothCost;
     expense.innerText = totalExpense;
+
+    // error handling 02::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    if(totalExpense > incomeMoney){
+        document.getElementById("error-msg1").style.display = "block";
+        document.getElementById("error-msg").style.display = "none";
+        expense.innerText = "";
+        balance.innerText = "";
+        return;
+    }
+    // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    document.getElementById("error-msg1").style.display = "none";
+    document.getElementById("error-msg").style.display = "none";
 
     // function call 
     let totalBalance = getInput2("balance"); 
@@ -64,9 +79,21 @@ document.getElementById("save-btn").addEventListener("click", function(){
     let totalBalance = getInput2("balance");
 
     const savingMoney = (incomeMoney * savingTotal) / 100;
-    const remainingBalance = totalBalance - savingMoney; 
+
+    //error handling 03::::::::::::::::::::::::::::::::::::::::::::::::::
+    if(savingMoney >= totalBalance){
+        document.getElementById("error-msg2").style.display = "block";
+        document.getElementById("error-msg3").style.display = "none";
+        return;
+    }
+    
+    //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    document.getElementById("error-msg3").style.display = "none";
+    document.getElementById("error-msg2").style.display = "none";
+    const remainingBalance = totalBalance - savingMoney;
     
     document.getElementById("saving-amount").innerText = savingMoney;
     document.getElementById("remaining-balance").innerText = remainingBalance;
+
     
 })

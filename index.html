@@ -68,7 +68,8 @@
                         </div>
                         <input type="button" value="Calculate" class="bg-success form-control w-50 m-auto text-white display-3 border-0 my-4" id="calculate-btn">
                         <p class="text-danger text-center" id="error-msg">Error, you are allowed to enter positive amount....</p>
-                        <p class="text-danger text-center" id="error-msg1">Error, you are not allowed to enter string....</p>
+                        <p class="text-danger text-center" id="error-msg1">Error, your expenses are crossing your income....</p>
+                        <p class="text-danger text-center" id="error-msg4">Error, you have to enter integer not string....</p>
                         <div class="balance text-capitalize">
                             <h5 class="fw-bold">total expenses: <span id="total-expense"></span></h5>
                             <h5 class="fw-bold">balance: <span id="balance"></span></h5>
@@ -86,7 +87,8 @@
                         <div class="savings text-center my-3">
                             <h5 class="fw-bold text-capitalize">saving amount: <span id="saving-amount"></span></h5>
                             <h5 class="fw-bold text-capitalize">remaining balance: <span id="remaining-balance"></span></h5>
-                            <p></p>
+                            <p class="text-danger text-center" id="error-msg2">Error, you have not enough money to save.....</p>
+                            <p class="text-danger text-center" id="error-msg3">Error, you have to enter positive integer value.....</p>
                         </div>
                     </div>
 

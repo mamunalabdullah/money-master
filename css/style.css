@@ -25,6 +25,6 @@ i{
 label{
     font-weight: bold;
 }
-#error-msg, #error-msg1{
+#error-msg, #error-msg1, #error-msg2, #error-msg3, #error-msg4{
     display: none;
 }
