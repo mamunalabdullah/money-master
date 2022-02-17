@@ -1,6 +1,10 @@
 function getInput(){
     const income = document.getElementById("income-input");
-    const incomeMoney = Number(income.value);
+    let incomeMoney = income;
+    if(typeof(income) != "string"){
+        incomeMoney = Number(income.value);
+    }
+    
 
     return incomeMoney;
 }
@@ -56,6 +60,8 @@ document.getElementById("calculate-btn").addEventListener("click", function(){
         return;
     }
     // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    
 
     document.getElementById("error-msg1").style.display = "none";
     document.getElementById("error-msg").style.display = "none";
